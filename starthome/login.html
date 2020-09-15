@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Sign up</title>
+        <style>
+            *{margin:0; padding:0;}
+            .container{
+                width:400px; margin:50px auto; border: 1px solid gray;
+            }
+            h1{
+                display:block; background: #D2691E; color:white;
+                font-size: 14px; text-align: center; height: 45px; line-height: 40px;
+            }
+            .label{
+                font-size: 13px; margin: 10px 0; padding: 0 10px; color:black;
+            }
+            .form{
+                padding: 0 10px;
+            }
+            .form input {
+                width:100%; height:35px; padding: 0 15px; box-sizing: border-box; border-radius: 5px; border: 1px solid #ddd; 
+            }
+            #signUp{
+                margin-top:20px; display:block; width:100%; height:45px; background:green;
+                color:white; border:none; cursor: pointer;
+            }
+            p{
+                font-size:50px;
+                text-align: center;
+                background-color: aquamarine;  
+            }
+            img{
+                width:10px;
+            }
+            #url{
+                width:50px;
+                height:50px;
+            }
+        </style>
+    </head>
+    <body style="background-color:wheat">
+        <p>Welcome to Starting Page</p>
+        
+        <div class="container">
+            <div class="register">
+                <h1>회원가입</h1>
+                <div class="label">아이디(10자 내외, 특수문자 제외)</div>
+                <div class="form">
+                    <input type="text" id="userId" placeholder="아이디를 입력하세요">
+                </div>
+                
+                <div class="label">비밀번호(10자 내외, 특수문자 제외)</div>
+                <div class="form">
+                    <input type="password" id="userPass" placeholder="비밀번호를 입력하세요">
+                </div>
+                
+                <div class="label">비밀번호 확인</div>
+                <div class="form">
+                    <input type="password" id="userConfirm" placeholder="다시한번 비밀번호를 입력하세요">
+                </div>
+                
+                <div class="label">이름</div>
+                <div class="form">
+                    <input type="email" id="userName" placeholder="이름을 입력하세요">
+                </div>
+            
+                <button id="signUp" onclick="allright()">가입하기</button> 
+            </div>
+        </div>
+        
+        <script src="./login.js"></script>
+    </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <meta property="og:title" content="Hoon's coding">
+        <meta property="og:description" content="언제나 활발한 고등학생 이승훈의 코딩 스토리">
+        <meta property="og:image" content="/증명사진.jpg">
+        <title>Hello everyone</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div class="users">
+            <a href="https://www.youtube.com/channel/UCiDDX7juB8aprYVsGCArGgg/?guided_help_flow=5"><img src="youtube.png"alt="유튜브 바로가기" id="url"></a>
+            <a href="https://www.instagram.com/jingu_hoon_0730/"><img src="instagram.jpeg"alt="인스타그램 바로가기"id="url"></a>
+            <a href="https://www.facebook.com/jinguhoon"><img src="facebook.png"alt="페이스북 바로가기"id="url"></a>
+            <a href="https://open.kakao.com/o/syfklO6b"><img src="kakaotalk.png"alt="카카오톡 오픈채팅 바로가기"id="url"></a>
+        </div>
+        <p>Welcome to Hoon's Coding Stories</p> 
+        <div class="container">
+            <div class="register">
+                <h1 style="font-size:50px; padding-top: 30px; text-align: center;">로그인</h1>
+                <form>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="아이디를 입력해주세요"><br>
+                    <div class="clear"></div>
+                    <label for="pwd">Password:</label>
+                    <input type="password" id="pwd" name="pwd" placeholder="비밀번호를 입력해주세요" onkeydown="onEnterLogin()">
+                    <div class="clear"></div>
+                    <label>Show Password<input type="checkbox" onclick="pw_func();"></label>
+                    <input type="button" value="회원가입" onclick="signup_func()">
+                    <input type="button" value="로그인" onclick="loc_func()"><br>
+                    <div class="clear"></div>
+                    <img src="증명사진.jpg">
+                </form>
+            </div>
+        </div>
+        <script>
+            function signup_func(){location.href="http://127.0.0.1:5500/practice(1)/signup(ex).html"}
+            function loc_func(){
+                var x=document.getElementById('username');
+                var y=document.getElementById('pwd');
+                if(!x.value||!y.value) alert('로그인 정보를 다시 입력해주세요!');
+                else{
+                    if(x.value==="kadeen0553"&&y.value==="tmdgns0560!") {alert('로그인 성공!'); location.href="http://127.0.0.1:5500/develop/main.html"}else{alert('로그인 실패'); location.reload();}
+                }
+            }
+            function pw_func()
+            {
+                var a=document.getElementById('pwd');
+                if(a.type==="password") a.type="text";
+                else{a.type="password";}
+            }
+            function onEnterLogin()
+            {
+                var keyCode = window.event.keyCode;
+                if(keyCode==13){
+                    loc_func();
+                }
+            }
+        </script>
+    </body>
+</html>

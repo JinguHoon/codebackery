@@ -1,0 +1,58 @@
+body, head {
+    background-color: lavenderblush;
+    margin: 0 0;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+a.menu-box-text:hover{
+    background-color:white;
+    color:black;
+}
+.Webpages-name-mean{
+    margin-top: 5px;
+    margin-left: 10px;
+}
+.Hoonlife-logo {
+    color:lightskyblue;
+    font-size: 60px;
+    font-family: 'Fredoka One', cursive;
+    text-align: center!important;
+}
+.Hoonlife-logo-is{
+    font-family: 'Segoe UI',A   rial,sans-serif;
+    float: right!important;
+    letter-spacing: 3px;
+    text-align: center!important;
+    margin-top: 10px;
+    line-height: 25px;
+    font-size: 25px;
+}
+img {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.menu-box{
+    margin-top: 20px;
+    width: auto;
+    height: 50px;
+    background-color:darksalmon; 
+    padding-top: 15px;
+}
+.login {
+    margin-top:10px;
+    margin-left:10px;
+}
+input[type=text], input[type=password] {
+    margin-right: 15px;
+    padding: 10px 15px;
+    border: solid 1px;
+    border-radius: 5%;
+}
+.menu-box-text{
+    font-size: 30px;
+    font-family: 'Single Day', cursive;
+    margin-left: 30px;
+    color:white;
+}

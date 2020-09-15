@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Welcome</title>
+        <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./main.css">
+        </head>
+        <body onload="startTime()" style="background-color: pink;">
+            <div class="container">
+                <div id="Hello">
+                    <h1>{$Hello}</h1>
+                </div>
+                <div class="clockBox">
+                    <h1 style="font-size: 40px;">현재시각</h1>
+                    <div id="clockImage" style="margin-top: -20px;">
+                        <canvas id="canvas" width="200" height="200"
+                            style="background-color:palevioletred; border-radius: 50%;">
+                        </canvas>
+                        <script src="./clock.js"></script>
+                    </div>
+                    <div id="clock" style="color:black; font-weight: bold; font-size: 20px;">
+                        <script src="showTIme.js"></script>
+                    </div>
+                </div>
+            </div>
+        </body>
+</html>

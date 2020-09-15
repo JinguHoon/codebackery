@@ -1,0 +1,14 @@
+body{
+    font-family: 'Acme', sans-serif;
+}
+.clockBox
+{
+    background-color: palevioletred;
+    color: skyblue;
+    text-align: center;
+    border:5px solid rgb(99, 83, 83);
+    border-radius: 30%;
+    margin-top:50px;
+    width:300px;
+    height:350px;
+}

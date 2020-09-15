@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <div class ="container">
+            <div class ="register">
+                <div class="signup">이름 : <input type="text" placeholder="이름을 입력해주세요"  id="name"></div><br>
+                <div class="signup">아이디 : <input type="text" placeholder="아이디를 입력해주세요"  id="id"></div><br>
+                
+                <div class="signup">비밀번호 : <input type="password"id="password_1"  placeholder="비밀번호를 입력해주세요" onchange="isSame()">
+                    <span id="changealerm" style="color:black; font-weight:bolder;"> 주의 !! 8자 이상 15자 이하의 비밀번호를 입력해주세요</span>
+                </div><br>
+                <div class="signup">비밀번호 재확인 : <input type="password" id="password_2" placeholder="다시 한번 비밀번호를 입력해주세요" disabled="true" onchange="isSame()">
+                    <span id="resultsame"></span>
+                </div><br>
+                <div class="signup">별명 : <input type="text"  placeholder="별명을 입력해주세요" id="nickname"></div><br>
+                <div class="final_result">
+                    <input type="button" value="가입" onclick="signup()" style="background-color: green; width:100px; font-size: bold; color:white;">
+                    <input type="button" value="취소" onclick="cancel()" style="background-color: red; width:100px; font-size: bold; color:white;">
+                </div>
+            </div>
+        </div>
+        <script>
+            if(confirm('회원가입을 시작하시겠습니까?')){alert('환영합니다');}
+            else{alert('메인페이지로 돌아갑니다');
+                location.href="http://127.0.0.1:5500/practice(1)/login.html";}
+            function cancel()
+            {
+                alert('메인 페이지로 돌아갑니다');
+                location.href="http://127.0.0.1:5500/practice(1)/login.html";
+
+            }
+            function signup() {
+                alert('가입 성공!');
+                alert('메인 페이지로 돌아갑니다');
+                location.href="http://127.0.0.1:5500/practice(1)/login.html";
+            }
+            function isSame(){
+                var pw=document.getElementById('password_1').value;
+                var chkpw=document.getElementById('password_2').value;
+                if(pw.length==0){
+                    document.getElementById('changealerm').innerHTML="주의 !! 8자 이상 15자 이하의 비밀번호를 입력해주세요";
+                    document.getElementById('changealerm').style.color='black';
+                    document.getElementById('changealerm').style.fontSize='bold';
+                }
+                else if(pw.length<8||pw.length>15) {
+                    document.getElementById('changealerm').innerHTML="다시 입력하세요";
+                    document.getElementById('changealerm').style.color='red';
+                }
+                else{
+                    document.getElementById('changealerm').innerHTML="적절한 비밀번호";
+                    document.getElementById('changealerm').style.color='green';
+                    document.getElementById('password_2').disabled=false;
+                }
+                if(pw!=""&&chkpw!="") {
+                    if(pw==chkpw){
+                        document.getElementById('resultsame').innerHTML="비밀번호 설정 성공!";
+                        document.getElementById('resultsame').style.color="green";
+                        document.getElementById('resultsame').style.fontSize='bold';
+                    }
+                    else{
+                        alert('일치하지 않습니다')
+                        alert('다시 입력해주세요')
+                        document.getElementById('password_2').value="";
+                    }
+                }    
+            }
+            
+        </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+    <style>
+        .input_box {
+            position: absolute;
+            top:40%;
+            left:40%;
+        }
+        input {
+            width: 600px;
+            height: 50px;
+            font-size: 30px;
+        }
+        input::placeholder {
+            color:black;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="input_box">
+        <input type="text" id="input" placeholder="원하시는 과목을 입력하세요" onkeydown="Enter_check()">
+    </div>
+    <script>
+        function Enter_check() {
+            if(event.keyCode == 13){
+                movesite();  // 실행할 이벤트
+            }
+        }
+        function movesite() {
+            var get_subject = document.getElementById('input').value;
+            if(get_subject=="국어") {
+                alert('국어 사이트로 이동합니다');
+                window.open("https://us02web.zoom.us/j/3300965795?pwd=RTBUUXVabnhKM3VRMXh0bE5ZZWpUdz09");
+            }
+            else if(get_subject=="수학") {
+                alert('수학 사이트로 이동합니다');
+                window.open("https://us02web.zoom.us/j/6838770867?pwd=NHh1R0Zlamw1eE5CZ1ZmM1Q5WFRxZz09");
+            }
+            else if(get_subject=="영어") {
+                alert('영어 사이트로 이동합니다');
+                window.open("https://zoom.us/j/4700404365?pwd=ckQ4eWNPT2Fxem1mSXpKWCttVEVGQT09");
+            }
+            else if(get_subject=="통합사회") {
+                alert('통합사회 사이트로 이동합니다');
+                window.open("https://calendar.google.com/calendar/b/1/r/month");
+            }
+            else if(get_subject=="통합과학") {
+                alert('통합과학 사이트로 이동합니다');
+                window.open("https://zoom.us/j/4361766687");
+            }
+            else if(get_subject=="체육") {
+                alert('체육 사이트로 이동합니다');
+                window.open("https://zoom.us/j/7760965125?pwd=cXFDREJHbmRSTWRvMENzTmZ0eTlLZz09");
+            }
+            else if(get_subject=="미술") {
+                alert('미술 사이트로 이동합니다');
+                window.open("https://zoom.us/j/8448373394");
+            }
+            else if(get_subject=="플밍B") {
+                alert('플밍B 사이트로 이동합니다');
+                window.open("https://us02web.zoom.us/j/4679526373");
+            }
+            else if(get_subject=="플밍A") {
+                alert('플밍A 사이트로 이동합니다');
+                window.open("https://us04web.zoom.us/j/4332940405");
+            }
+            else if(get_subject=="컴시일") {
+                alert('컴시일 사이트로 이동합니다');
+                window.open("https://us04web.zoom.us/j/6971690768");
+            }
+            else {alert('과목을 다시 입력하세요');location.reload();}
+        }
+    </script>
+</body>
+</html>
